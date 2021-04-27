@@ -38,3 +38,46 @@ Route::get("arreglos" , function(){
     var_dump($estudiantes);
     echo "</pre>";
 } );
+
+Route::get('paises', function(){
+
+    $paises =  [
+        "Colombia" => [
+                 "capital" => "Bogota",
+                 "moneda" => "peso",
+                 "poblacion" => 51
+        ],
+        "Japon" => [
+            "capital" => "Tokio",
+            "moneda" => "Yen japonés",
+            "poblacion" => 126,3
+        ],
+       "Australia" =>[
+        "capital" => "canberra",
+        "moneda" => "dolar australiano",
+        "poblacion" => 25,36
+
+       ]
+   ];
+
+
+   /*echo "<pre>";//mostrar en pantalla
+   print_r($paises);//imprime el arreglo
+   echo "</pre>";*/
+
+   //recorrer el arreglo  de paises
+
+    foreach ($paises as $indice => $valor){
+        echo "$indice";
+        echo "<pre>";
+        echo ($valor["capital"]);
+        echo "</pre>";
+        echo "<hr />";
+
+
+    }
+
+
+});
+
+
