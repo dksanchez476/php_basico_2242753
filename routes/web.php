@@ -60,6 +60,10 @@ Route::get('paises', function(){
        ]
    ];
 
+   //mostrar la vista de paises.
+
+   return view('paises')->with('naciones', $paises);
+
 
    /*echo "<pre>";//mostrar en pantalla
    print_r($paises);//imprime el arreglo
